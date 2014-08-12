@@ -1,0 +1,25 @@
+[
+    {
+        "prefix": "Mr.",
+        "firstName": "Mark",
+        "lastName": "Twain",
+        "suffix": ""
+    },
+    {
+        "prefix": "Father",
+        "firstName": "John",
+        "lastName": "Paul",
+        "suffix": "OD"
+    },
+    {
+        "prefix": "",
+        "firstName": "Julia",
+        "lastName": "Childs",
+        "suffix": "Esq.",
+        "books": [
+            {
+                "name": "Robinson Crusuo"
+            }
+        ]
+    }
+]

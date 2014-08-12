@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="authors">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sample JSON Model</title>
+</head>
+<body ng-controller="MainCtrl">
+
+<button ng-click="loadAuthors()">Load My Authors</button>
+<div ng-repeat="a in authors">
+    <h4>
+{{a.firstName + ' ' + a.lastName}}
+    </h4>
+
+    <ul>
+        <li ng-repeat="b in a.books">{{b.name}}</li>
+    </ul>
+</div>
+
+<script src="bower_components/angularjs/angular.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main-ctrl.js"></script>
+<script src="scripts/services/authors.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "ngNbpFB",
+  "version": "0.0.0",
+  "homepage": "https://github.com/fburchdev/ngNbpFB",
+  "authors": [
+    "Trevor Ewen <tewen@neosavvy.com>"
+  ],
+  "description": "An app for managing collections of books.",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.2.21"
+  }
+}
