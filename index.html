@@ -7,13 +7,18 @@
 <body ng-controller="MainCtrl">
 
 <button ng-click="loadAuthors()">Load My Authors</button>
-<div ng-repeat="a in authors">
+<div ng-repeat="author in authors">
     <h4>
-{{a.firstName + ' ' + a.lastName}}
+{{author.firstName + ' ' + author.lastName}}
     </h4>
 
     <ul>
-        <li ng-repeat="b in a.books">{{b.name}}</li>
+        <li ng-repeat="series in author.series">
+            {{series.title}}
+            <ul><li ng-repeat="book in series.books">{{book.sequenceNumber}}. {{book.title}}</li></ul>
+            {{series.notes}}
+        </li>
+
     </ul>
 </div>
 
