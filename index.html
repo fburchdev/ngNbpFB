@@ -2,29 +2,26 @@
 <html ng-app="authors">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Sample JSON Model</title>
+    <title>Next Book Please</title>
 </head>
 <body ng-controller="MainCtrl">
-
-<button ng-click="loadAuthors()">Load My Authors</button>
 <div ng-repeat="author in authors">
-    <h4>
-{{author.firstName + ' ' + author.lastName}}
-    </h4>
-
+    <h4>{{author.firstName + ' ' + author.lastName}}</h4>
     <ul>
         <li ng-repeat="series in author.series">
             {{series.title}}
             <ul><li ng-repeat="book in series.books">{{book.sequenceNumber}}. {{book.title}}</li></ul>
             {{series.notes}}
         </li>
-
     </ul>
 </div>
 
 <script src="bower_components/angularjs/angular.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main-ctrl.js"></script>
-<script src="scripts/services/authors.js"></script>
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
 </body>
 </html>
