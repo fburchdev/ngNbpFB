@@ -20,19 +20,20 @@
 </head>
 <body ng-controller="MainCtrl">
 <div class='container'>
-<h3>Next Book Please</h3>
-<p>Mission: Help readers to discover the correct reading order of fiction series by their favorite authors.</p>
-<div ng-repeat="author in authors">
-    <h4>{{author.firstName + ' ' + author.middleName + ' ' + author.lastName}}</h4>
-    <ul class='list-unstyled'>
-        <li ng-repeat="series in author.series">
-            {{series.title}}
-            <ul class='list-unstyled'><li ng-repeat="book in series.books">{{book.sequenceNumber}}. {{book.title}}</li></ul>
-            <em>{{series.notes}}</em>
-        </li>
-    </ul>
+    <h3>Next Book Please</h3>
+    <p>Mission: Help readers to discover the correct reading order of fiction series by their favorite authors.</p>
+    <div ng-repeat="author in authors">
+        <h4>{{author.firstName + ' ' + author.middleName + ' ' + author.lastName}}</h4>
+        <ul class='list-unstyled'>
+            <li ng-repeat="series in author.series">
+                {{series.title}}
+                <ul class='list-unstyled'><li ng-repeat="book in series.books">{{book.sequenceNumber}}. {{book.title}}</li></ul>
+                <em>{{series.notes}}</em>
+            </li>
+        </ul>
+    </div>
 </div>
-</div>
+
 <script src="bower_components/angularjs/angular.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main-ctrl.js"></script>
