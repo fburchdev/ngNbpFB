@@ -23,16 +23,22 @@
     <h3>Next Book Please</h3>
     <p>Mission: Help readers to discover the correct reading order of fiction series by their favorite authors.</p>
     <div ng-repeat="author in authors">
-        <h4>{{author.firstName + ' ' + author.middleName + ' ' + author.lastName}}</h4>
+        <h4 ng-click='setCurrentAuthor(author)'>{{author.firstName + ' ' + author.middleName + ' ' + author.lastName}}</h4>
         <ul class='list-unstyled'>
-            <li ng-repeat="series in author.series">
+            <li ng-repeat="series in author.series" ng-show='isCurrentAuthor(author)' ng-click='setCurrentSeries(series)'>
                 {{series.title}}
-                <ul class='list-unstyled'><li ng-repeat="book in series.books">{{book.sequenceNumber}}. {{book.title}}</li></ul>
-                <em>{{series.notes}}</em>
+                <ul class='list-unstyled'><li ng-repeat="book in series.books" ng-show='isCurrentSeries(series)'>{{book.sequenceNumber}}. {{book.title}}</li></ul>
+                <em ng-show='isCurrentSeries(series)'>{{series.notes}}</em>
             </li>
         </ul>
     </div>
+
+    <p onClick=alert('click!')>test display below:</p>
+    <div ng-show='false'>Some test text lorem ipsum etc. here</div>
+    <p>{{currentAuthor.lastName}}</p>
+    <p>{{currentSeries.title}}</p>
 </div>
+
 
 <script src="bower_components/angularjs/angular.js"></script>
 <script src="scripts/app.js"></script>
