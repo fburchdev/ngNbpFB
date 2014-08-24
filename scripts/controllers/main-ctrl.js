@@ -6,7 +6,12 @@ app.controller('MainCtrl',
         $scope.authors = $firebase(firebaseRef).$asArray();
 
         $scope.setCurrentAuthor = function(author){
-            $scope.currentAuthor = author;
+            if($scope.isCurrentAuthor(author)){
+                $scope.currentAuthor = null;
+            }
+            else {
+                $scope.currentAuthor = author;
+            }
         };
 
         $scope.isCurrentAuthor = function(author){
@@ -14,7 +19,12 @@ app.controller('MainCtrl',
         };
 
         $scope.setCurrentSeries = function(series){
-            $scope.currentSeries = series;
+            if($scope.isCurrentSeries(series)){
+                $scope.currentSeries = null;
+            }
+            else{
+                $scope.currentSeries = series;
+            }
         };
 
         $scope.isCurrentSeries = function(series){
