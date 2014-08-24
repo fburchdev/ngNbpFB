@@ -22,7 +22,7 @@
 <div class='container'>
     <h3>Next Book Please</h3>
     <p>Mission: Help readers to discover the correct reading order of fiction series by their favorite authors.</p>
-    <div ng-repeat="author in authors">
+    <div ng-repeat="author in authors | orderBy:'lastName'">
         <h4 ng-click='setCurrentAuthor(author)'>{{author.firstName + ' ' + author.middleName + ' ' + author.lastName}}</h4>
         <ul class='list-unstyled'>
             <li ng-repeat="series in author.series" ng-show='isCurrentAuthor(author)' ng-click='setCurrentSeries(series)'>
