@@ -1,0 +1,25 @@
+{
+  "name": "ngNbpFB",
+  "version": "0.0.1",
+  "description": "A look at authors and their series.",
+  "main": "scripts/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fburchdev/ngNbpFB.git"
+  },
+  "author": "Frances Burch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fburchdev/ngNbpFB/issues"
+  },
+  "homepage": "https://github.com/fburchdev/ngNbpFB",
+  "devDependencies": {
+    "karma": "^0.12.22",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-cli": "0.0.4",
+    "karma-jasmine": "^0.1.5"
+  }
+}

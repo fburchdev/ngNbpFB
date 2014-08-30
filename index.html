@@ -2,24 +2,46 @@
 <html ng-app="authors">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Sample JSON Model</title>
+    <title>Next Book Please</title>
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
 </head>
 <body ng-controller="MainCtrl">
-
-<button ng-click="loadAuthors()">Load My Authors</button>
-<div ng-repeat="a in authors">
-    <h4>
-{{a.firstName + ' ' + a.lastName}}
-    </h4>
-
-    <ul>
-        <li ng-repeat="b in a.books">{{b.name}}</li>
-    </ul>
+<div class='container'>
+    <h3>Next Book Please</h3>
+    <p>Mission: Help readers to discover the correct reading order of fiction series by their favorite authors.</p>
+    <div ng-repeat="author in authors | orderBy:'lastName'">
+        <h4 ng-click='setCurrentAuthor(author)'><span style='color:#006699'>{{author.firstName + ' ' + author.middleName + ' ' + author.lastName}}</span></h4>
+        <ul class='list-unstyled'>
+            <li ng-repeat="series in author.series" ng-show='isCurrentAuthor(author)' ng-click='setCurrentSeries(series)'>
+                <strong>{{series.title}}</strong>
+                <ul class='list-unstyled'><li ng-repeat="book in series.books | orderBy:'sequenceNumber'"
+                                              ng-show='isCurrentSeries(series)'>{{book.sequenceNumber}}. {{book.title}}</li></ul>
+                <em ng-show='isCurrentSeries(series)'>{{series.notes}}</em>
+            </li>
+        </ul>
+    </div>
 </div>
+
 
 <script src="bower_components/angularjs/angular.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main-ctrl.js"></script>
-<script src="scripts/services/authors.js"></script>
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
 </body>
 </html>

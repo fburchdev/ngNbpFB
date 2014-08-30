@@ -16,6 +16,11 @@
     "tests"
   ],
   "dependencies": {
-    "angularjs": "~1.2.21"
+    "angularjs": "~1.2.21",
+    "angularfire": "~0.8.0"
+  },
+  "devDependencies": {
+    "angular-resource": "~1.2.23",
+    "angular-mocks": "~1.2.23"
   }
 }

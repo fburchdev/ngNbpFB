@@ -13,13 +13,69 @@
     },
     {
         "prefix": "",
-        "firstName": "Julia",
-        "lastName": "Childs",
-        "suffix": "Esq.",
-        "books": [
+        "firstName": "J.",
+        "middleName": "R.R.",
+        "lastName": "Tolkien",
+        "suffix": "",
+        "series": [
             {
-                "name": "Robinson Crusuo"
+                "title": "The Lord of the Rings",
+                "books": [
+                    {
+                        "sequenceNumber": "1",
+                        "title": "The Fellowship of the Ring"
+                    },
+                    {
+                        "sequenceNumber": "2",
+                        "title": "The Two Towers"
+                    },
+                    {
+                        "sequenceNumber": "3",
+                        "title": "The Return of the King"
+                    }
+
+                   ],
+                "notes": "The Hobbit and The Silmarillion are prequels which may be read before or after The Lord of the Rings series."
             }
         ]
+     },
+    {
+       "prefix": "",
+       "firstName": "Frances",
+       "middleName": "Marie",
+       "lastName": "Burch",
+       "suffix": "",
+       "series": [
+           {
+               "title": "A Smashing Series",
+               "notes": "Some test notes to go with Smashing.",
+               "books": [
+                   {
+                       "sequenceNumber": "1",
+                       "title": "First Smashing Book"
+                   },
+                   {
+                       "sequenceNumber": "2",
+                       "title": "Second Smashing Book"
+                   }
+               ]
+           },
+           {
+               "title": "A Riveting Series",
+               "notes": "Some test notes to go with Riveting.",
+               "books": [
+                   {
+                       "sequenceNumber": "1",
+                       "title": "Riveting Part One"
+                   },
+                   {
+                       "sequenceNumber": "2",
+                       "title": "Riveting Part Two"
+                   }
+               ]
+           }
+
+       ]
     }
+
 ]
