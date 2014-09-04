@@ -1,5 +1,5 @@
-var app = angular.module('authors',['firebase']);
-app.controller('MainCtrl',
+/* @FINALPROJECTCOMMENT I try to keep the module instantiations in the app.js file, and out of global variables. */
+angular.module('authors').controller('MainCtrl',
     ['$scope', '$http', '$firebase', function ($scope, $http, $firebase) {
 
         var firebaseRef = new Firebase('https://shining-inferno-1424.firebaseio.com/');

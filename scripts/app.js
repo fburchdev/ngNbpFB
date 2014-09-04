@@ -1,1 +1,1 @@
-angular.module('authors', []);
+angular.module('authors',['firebase']);

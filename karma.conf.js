@@ -16,6 +16,9 @@ module.exports = function (config) {
         // list of files / patterns to load in the browser
         files: [
             'bower_components/angularjs/angular.js',
+            /* @FINALPROJECTCOMMENT added these lines which were missing, probably my bad from when I showed you how to test */
+            'bower_components/angular-mocks/angular-mocks.js',
+            'bower_components/angular-resource/angular-resource.js',
             'https://cdn.firebase.com/js/client/1.0.18/firebase.js',
             'https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js',
             'scripts/app.js',
